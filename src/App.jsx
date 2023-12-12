@@ -1,6 +1,7 @@
 import pokeSVG from "./assets/poke.svg.png"
 import { useState } from "react"
 import './styles/app.css'
+import Card from "./components/Card"
 
 
 function App() {
@@ -20,6 +21,36 @@ function App() {
           <p>High Score: {highScore}</p>
         </div>
       </section>
+      <body>
+        <div className="cardBox">
+          <div>
+            <Card />
+          </div>
+          <div>
+            <Card />
+          </div>
+          <div>
+            <Card />
+          </div>
+          <div>
+            <Card />
+          </div>
+          <div>
+            <Card />
+          </div>
+          <div>
+            <Card />
+          </div>
+          <div>
+            <Card />
+          </div>
+          <div>
+            <Card />
+          </div>
+         
+        </div>
+      </body>
+    
     </div>
      
     </>
