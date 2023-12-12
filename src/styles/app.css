@@ -1,0 +1,15 @@
+.topBar img{
+    width: 150px;
+    height: auto;
+}
+
+.topBar{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+.fullContainer{
+    display: flex;
+    flex-direction: column;
+}
