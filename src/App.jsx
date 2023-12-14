@@ -2,6 +2,7 @@ import pokeSVG from "./assets/poke.svg.png"
 import { useState, useEffect } from "react"
 import './styles/app.css'
 import Card from "./components/Card"
+import ditto from "./assets/Pokemon-Ditto-Artwork.png"
 
 
 function App() {
@@ -116,6 +117,7 @@ function App() {
   return (
     <>
     <div className={"loading"+" "+`${loaded ? "none" : ""}`}>
+      <img src={ditto} alt="" />
       <h1>Loading...</h1>
       <div id="cover-spin"></div>
     </div>
