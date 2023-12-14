@@ -1,6 +1,8 @@
 .card div img{
     max-width: 150px;
+    background-color: yellow;
 }
+
 
 .card div{
     display: flex;
@@ -9,16 +11,21 @@
     align-items: center;
 }
 
+.card div p{
+    background-color: yellow;
+    color: black;
+}
+
 .container{
     background: none;
     width: 200px;
     height: 200px;    
     padding: 20px;
     padding-top: 50px;
+    background-color: navy;
 }
 
 .card{
-    border-radius: 8px;
     box-shadow: 1px 2px 3px 4px rgba(20,20,20,0.4);
     padding: 10px;
     position: relative;
@@ -36,6 +43,8 @@
     background-color: yellow;
     top: 0;
     left: 0;
+    border-radius: 8px;
+
   }
 
   .front p{
@@ -51,6 +60,8 @@
     background-color: black;
     top: 0;
     left: 0;
+    border-radius: 8px;
+
   }
 
   .flipCard{

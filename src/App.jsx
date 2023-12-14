@@ -130,7 +130,7 @@ function App() {
         <div>
           <img src={pokeSVG} alt="" />
         </div>
-        <div>
+        <div className="scoreCount">
           <p>Score : {count}</p>
           <p>High Score: {highScore}</p>
         </div>
