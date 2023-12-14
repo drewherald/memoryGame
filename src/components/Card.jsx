@@ -1,16 +1,29 @@
 import React from 'react'
 import '../styles/card.css'
 
-export default function Card({data, name = ["name", "name", 'name', 'name', "name", "name", 'name', 'name'], number = 0}) {
+export default function Card({data, name, number = 0, active}) {
     
     let names = name
-  return (
-    <div className='card'>
-        <div>
-            <img src='' alt="" />
-        </div>
-        <p>{names}</p>
+    
+    
 
-    </div>
+    
+
+  return (
+
+        <div className='container'>
+            <div className={"card"+" "+`${active ? "flipCard" : ""}`}>
+                <div className='front'>
+                    <div>
+                        <img src={data[number]} alt="" />
+                    </div>
+                    <p>{names[number]}</p>
+                </div>
+                <div className={'back'}>
+                    
+                </div>
+            </div>
+        </div>
+    
   )
 }
