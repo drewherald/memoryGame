@@ -1,13 +1,16 @@
 import React from 'react'
 import '../styles/card.css'
 
-export default function Card() {
+export default function Card({data, name = ["name", "name", 'name', 'name', "name", "name", 'name', 'name'], number = 0}) {
+    
+    let names = name
   return (
     <div className='card'>
         <div>
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a6/Pok%C3%A9mon_Pikachu_art.png" alt="" />
+            <img src='' alt="" />
         </div>
-        <p>Pikachu</p>
+        <p>{names}</p>
+
     </div>
   )
 }
