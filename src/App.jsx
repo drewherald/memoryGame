@@ -54,6 +54,10 @@ function App() {
 
   const flip = (index) => {
 
+    if(isActive){
+      return
+    }
+
     const name = nameList[index]
 
     if(!checker.includes(name)){
