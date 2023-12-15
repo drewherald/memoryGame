@@ -1,8 +1,8 @@
-import pokeSVG from "./assets/poke.svg.png"
-import { useState, useEffect } from "react"
-import './styles/app.css'
-import Card from "./components/Card"
+import { useEffect, useState } from "react"
 import ditto from "./assets/Pokemon-Ditto-Artwork.png"
+import pokeSVG from "./assets/poke.svg.png"
+import Card from "./components/Card"
+import './styles/app.css'
 
 
 function App() {

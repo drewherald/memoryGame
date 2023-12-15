@@ -1,0 +1,10 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.sortImports": "explicit"
+  },
+  "[css]": {
+    "editor.suggest.insertMode": "replace"
+  },
+  "editor.formatOnSave": true
+}
