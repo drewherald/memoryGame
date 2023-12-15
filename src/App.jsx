@@ -15,12 +15,26 @@ function App() {
   const [isActive, setActive] = useState(false)
   const [checker, setChecker] = useState([])
   const [loaded, setLoaded] = useState(false)
+  const [reset, setReset] = useState(376)
 
+
+
+  //load page
   const load = () => {
     setLoaded(true)
   }
 
   setTimeout(load, 3000)
+
+
+
+
+  //get data from API
+  useEffect(() => {
+    fetch(`https://pokeapi.co/api/v2/pokemon?limit=8&offset=${reset}`)
+      .then(response => response.json())
+      .then(json => pullData(json.results))
+  },  [reset])
 
   const pullData = (array) => {
     const ph = []
@@ -37,6 +51,11 @@ function App() {
     setTimeout(function(){setUrlList(ph)}, 2800)
     setTimeout(function(){setNameList(phName)}, 2800)
   }
+
+
+
+
+  // functionality code
 
   function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
@@ -78,44 +97,51 @@ function App() {
       }
     }
   
-
+    let c = count+1
     setActive(!isActive)
-
-    if(isActive){
-      
+    if((c %= 8) == 0){
+      setTimeout(timedSwap, 500)
+    }else{
+      setTimeout(swap, 750)
     }
+    
 
-    setTimeout(swap, 1000)
+    
 
   }
 
   const swap = () => {
+
+    let c = count+1
+
+    if((c %= 8) == 0){
+      const pholdr = reset + 8
+      setReset(pholdr)
+    }
+
     let placeHold = numList
     placeHold = shuffle(numList)
     setNumList(placeHold)
     setActive(false)
-    console.log(isActive)
 }
 
+const timedSwap = () => {
 
-  useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=8&offset=378')
-      .then(response => response.json())
-      .then(json => pullData(json.results))
-  }, [])
+  let c = count+1
 
+  if((c %= 8) == 0){
+    const pholdr = reset + 8
+    setReset(pholdr)
+  }
 
-  /*
-  useEffect(() => {
-    for(url in urlList){
-      fetch(url)
-      .then(response => response.json())
-      .then(json => console.log(url))
-    }
-   
-  }, urlList) */
-
-
+  setTimeout(() => {
+    let placeHold = numList
+    placeHold = shuffle(numList)
+    setNumList(placeHold)
+    setActive(false)
+  }, 2500)
+  
+}
 
 
   return (
